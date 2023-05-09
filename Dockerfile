@@ -1,3 +1,3 @@
 FROM python:3.11
-ADD app.py .
-CMD [“python”, “./app.py”] 
+COPY . /app/app.py
+CMD ["python", "C:/Users/GDL2KOR/Downloads/microservpy/src/app.py"]
