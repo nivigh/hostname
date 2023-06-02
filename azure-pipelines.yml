@@ -11,9 +11,13 @@ pool:
 
 steps:
 - script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  displayName: 'Jenkins Queue'
+- task: JenkinsQueueJob@2
+  inputs:
+    serverEndpoint: 'jenkinsService'
+    jobName: 'pipeline1'
+    captureConsole: true
+    capturePipeline: true
+    isParameterizedJob: false
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
